@@ -9,6 +9,13 @@ Deployment Guide:
 
 2. With that done the user will boot up MVS and click clone repo at the top right where they will input the link from the github alongside adding a path that the repo can reside in.
 
+3. One thing to note is that there are many NuGet packages requried for this project which I will list here:
+
+
+
+
+
+
 Possible Pitfall: Insure a .gitignore is present in the repo if you as the user planning to make change because it will try and stage your entire hard drive (Been there)
 
 3. With the user being in the project now they will now have to setup the database connection. With the database, the user will log into their with their azure or with a pre provided database. Once in the user will have to go back to MVS and ensure the following statement is present within appsettings.json
@@ -26,7 +33,11 @@ is an example of a database connection. Looking at the code the connection to th
 
 Pitfall: ensure the spacing is correct in this statement since improper spacing might cause it not to function
 
-6. 
+6. Once connectivity is established, the user will navigate to the SQL folder within the main project for the frontned. There will be two files in here called DatabaseCreation and DatabaseData which the user will navigate to and copy and paste each page into two seprate querys within the SQL manager starting with creation. This will make the tables and the data file will make the mock data.
+
+7. Once this has all been completed the user should be able to fully use the appilication if they followed the steps and avoided the pitfalls.
+
+For help with errors there are many different sources of assistance such as, The error help function in the IDE, Stack OverFlow, Resources on Ecampus, W3Schools, Copliot AI within MVS, Chatgpt, Mr Meadows, Our Group! 
 
 
 
