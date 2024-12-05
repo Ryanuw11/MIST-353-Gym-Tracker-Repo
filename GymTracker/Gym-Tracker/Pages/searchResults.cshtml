@@ -1,0 +1,26 @@
+﻿
+@page
+@using GymTrackersAPI.Entities
+@model Gym_Tracker.Pages.SearchResultsModel
+
+<h2>Search Results</h2>
+
+
+@if (Model.UserList != null && Model.UserList.Any())
+
+{
+    <ul>
+        @foreach (var user in Model.UserList)
+
+        {
+            <li>@user.UserName - @user.UserEmail - @user.UserLevel</li>
+        }
+    </ul>
+}
+
+else
+
+{
+    <p>No results found.</p>
+
+}

@@ -1,0 +1,134 @@
+﻿@page
+@model Gym_Tracker.Pages.WorkoutsModel
+@{
+}
+<html>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        color: black;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 64px;
+        color: black;
+    }
+
+    h2 {
+        text-align: center;
+        color: black;
+    }
+
+    h3 {
+        text-align: center;
+        color: black;
+    }
+
+    p {
+        text-align: center;
+        color: black;
+    }
+
+    div {
+        text-align: center;
+        color: black;
+    }
+
+    table {
+        text-align: center;
+        color: black;
+    }
+
+</style>
+
+
+
+
+
+
+
+<head>
+
+
+    <title>
+        Workouts
+    </title>
+</head>
+<body>
+
+
+    <h1>
+        <storng>
+            Workouts
+        </storng>
+    </h1>
+    <p>
+        <h2>
+            The following are key workouts that fuel muscle growth
+        </h2>
+    </p>
+
+    <p>
+        <h3>
+            Barbell squat
+        </h3>
+        <img src="https://cdn12.picryl.com/photo/2016/12/31/man-person-power-people-109178-1024.jpg" width="460" height="345" />
+    </p>
+
+    <h3>
+        Deadlift
+    </h3>
+    <img src="https://powerlifting.life/wp-content/uploads/2023/12/What-Are-the-Main-Powerlifting-Movements.jpg" width="460" height="345" />
+    </p>
+
+
+    <p>
+        <h3>
+            Barbell benchpress
+        </h3>
+        <img src="https://cdn2.picryl.com/photo/2012/01/21/donyale-young-a-165-pound-weight-class-bench-press-0dbb48-1024.jpg" width="460" height="345" />
+    </p>
+
+
+    <p>
+        <h2>What muscles do these workouts target?</h2>
+
+        <table style="width:100%">
+            <tr>
+                <th>Workout</th>
+                <th>Muscles</th>
+                <th>Body Area</th>
+
+
+            </tr>
+            <tr>
+                <td>Barbell squat</td>
+                <td>Quadriceps, glutes, hamstrings, calves</td>
+                <td>Lower and upper legs</td>
+            </tr>
+            <tr>
+                <td>Deadlift</td>
+                <td>Hamstring, Trapezius, erector spinae</td>
+                <td>Legs and back</td>
+
+            </tr>
+            <tr>
+                <td>Barbell benchpress> </td>
+                <td>pectorial,deltoidal, biceps/triceps</td>
+                <td>Chest,shoulders, arms</td>
+            </tr>
+        </table>
+    </p>
+
+    <button onclick="myFunction()">Learn more about strength training</button>
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "These are key compound workouts that each target several parts of the body.";
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿@page
+@model Gym_Tracker.Pages.UserDataModel
+@{
+    var id = HttpContext.Request.Query["id"];
+}
+<h2 id="userId" style="visibility: hidden;"></h2>
+
+<div id= "UserName" style="visibility: hidden;"></div>
+<div id= "UserEmail" style="visibility: hidden;"></div>
+<div id= "UserJoined" style="visibility: hidden;"></div>
+<div id= "UserLevel" style="visibility: hidden;"></div>
+
+<script type="module">
+    displayGymDetails(@id);
+</script>

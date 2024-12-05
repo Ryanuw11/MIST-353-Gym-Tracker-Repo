@@ -1,0 +1,47 @@
+﻿body {
+}
+
+/* Results Section */
+.results-section {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .results-section h2 {
+        color: #3b5998;
+        margin-bottom: 15px;
+    }
+
+    .results-section ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+    }
+
+        .results-section ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+            .results-section ul li:last-child {
+                border-bottom: none;
+            }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3b5998;
+    color: white;
+    margin-top: 20px;
+}
+
+    footer a {
+        color: white;
+        text-decoration: underline;
+    }
