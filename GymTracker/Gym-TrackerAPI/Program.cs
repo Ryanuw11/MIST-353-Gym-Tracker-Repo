@@ -2,12 +2,16 @@ using GymTrackersAPI.Repositiories;
 using GymTrackersAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Gym_TrackerAPI.Repositiories;
+using Gym_TrackerDKAPI.Repositories;
+using GymTrackerAPI.Repositiories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<IGymMenu, GymMenu>();
 builder.Services.AddScoped<ILocationMenu, LocationMenu>();
+builder.Services.AddScoped<IApperalService, ApperalService>();
+builder.Services.AddScoped<IExerciseService,  ExerciseService>();
 
 builder.Services.AddDbContext<DbContextClass>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
