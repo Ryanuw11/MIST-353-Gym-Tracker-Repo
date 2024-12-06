@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GymTrackersAPI.Entities
+    //test
 {
     public class Exercise
     {
