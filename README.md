@@ -106,6 +106,8 @@ END RYANS APIS
 
 Our Application serves as a general website where the user can do things like search for other users and friends and see how far along they are level-wise. Or they could find new workouts from a page that we have that shows examples. Alongside this, they can check out the About Us page to learn about the company, and there's also a page to contact the team. These are just some of the features our application has and the goal of this app is to have everything a gymgoer could want in one single application without having to go outside of it to find new things when it comes to the gym.
 
+If a team of devs were to take over the project then I'd suggest to them that packages are very important for starting this project and many functions will break if the dev is missing even one package. Currently the APIs are fine as is but if the new devs were taking over to expand the website id suggest adding significantly more data to the db alongside adding more JS to the main pages to make the website look more professional. 
+
 
 DAVISON's API:
 API #1- The purpose of this API is to allow the user to enter an email on the website that will be sent to a database. There will be a page and the first thing it will show is a white box to enter one email which is clearly labeled. The user will hit enter, the email will be sent to the database, and a "Thank you! Your email has been sent." box will appear notifying the user that the goal was successfully completed. 
