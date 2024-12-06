@@ -95,7 +95,7 @@ GO
 
 
 
---davison walker mock data
+--davison walter's mock data
 
 --Creating mock data for the tables.
 
@@ -104,7 +104,7 @@ insert into Customer
 (First_Name, Last_Name)
 values
 ('Peter', 'Parker'), ('Wade', 'Wilson'), ('Steve', 'Rogers')
-go
+go 
 
 
 insert into Customer_Email
