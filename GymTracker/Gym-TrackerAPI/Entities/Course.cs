@@ -6,6 +6,7 @@ namespace Gym_TrackerAPI.Entities
 {
     public class Course
     {
+        [Key]
         public int CID { get; set; }
 
         [Required]
