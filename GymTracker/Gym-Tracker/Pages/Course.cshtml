@@ -1,0 +1,38 @@
+﻿@page
+@model YourNamespace.Pages.CoursesModel
+@{
+    ViewData["Title"] = "Courses Available";
+}
+
+<h2>Courses Available</h2>
+
+<form method="get">
+    <label for="searchQuery">Search for a course:</label>
+    <input type="text" id="searchQuery" name="searchQuery" value="@Model.SearchQuery" />
+    <button type="submit">Search</button>
+</form>
+
+@if (Model.FilteredCourses.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Class Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var course in Model.FilteredCourses)
+            {
+                <tr>
+                    <td>@course.CourseName</td>
+                    <td>@course.ClassPrice</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No courses found matching your search.</p>
+}

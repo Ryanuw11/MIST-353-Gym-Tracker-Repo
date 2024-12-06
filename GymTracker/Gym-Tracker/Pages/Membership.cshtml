@@ -1,0 +1,42 @@
+﻿@page
+@using Gym_TrackerAPI.Entities
+@model Gym_Tracker.Pages.MembershipLevelModel
+
+
+<h2>Memberships Avalible</h2>
+
+<form method="get">
+    <i class="fa-solid fa-location-arrow"></i>
+    <input type="search" ID="searchInput" name="MembershipLevel" class="form-control" placeholder="Search for Membership" />
+
+    <input type="submit" ID="submitBtn" value="Search" class="btn btn-primary" />
+</form>
+
+
+<div ID="ID">
+</div>
+
+
+<script type="module">
+    addMembershipFormListen()
+</script>
+
+@if (Model.MembershipList != null && Model.MembershipList.Any())
+
+{
+    <ul>
+        @foreach (var Level in Model.MembershipList)
+
+        {
+            <li class="result-item">@Level.ID - @Level.MembershipLevel</li>
+        }
+    </ul>
+}
+
+else
+
+{
+    <div id="results-container">
+        <p class="result-placeholder">Enter a Membership Level</p>
+    </div>
+}
