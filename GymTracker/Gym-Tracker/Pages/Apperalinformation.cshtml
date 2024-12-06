@@ -1,0 +1,48 @@
+﻿@page
+@using GymTrackersAPI.Entities
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@model Gym_Tracker.Pages.recommendedApperalModel
+
+<h2>Find Apperal That Meets Your Needs</h2>
+
+<form method="get">
+    <i class="fa-solid fa-location-arrow"></i>
+    <input type="search" id="ApperalID" name="ApperalID" class="form-control" value="Search Apperal By ID" />
+
+    <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
+</form>
+
+<div id="results" class="mt-4">
+</div>
+
+
+<script type="module">
+    addLocationFormListen()
+</script>
+
+@if (Model.Apperallist != null && Model.Apperallist.Any())
+
+{
+    <ul>
+        @foreach (var Apperal in Model.Apperallist)
+
+        {
+            <li class="result-item">@Apperal.ApperalType - @Apperal.ApperalBrand - @Apperal.ApperalMaterial</li>
+        }
+    </ul>
+}
+else
+{}
+    
+        <div id="results-container">
+    <p class="result-placeholder">Enter Apperal's ID Number</p>
+        </div>
+    
+
+
+
+
+
+
+
+

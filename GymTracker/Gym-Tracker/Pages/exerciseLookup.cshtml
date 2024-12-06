@@ -1,0 +1,13 @@
+﻿@page
+@using GymTrackersAPI.Entities
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@model Gym_Tracker.Pages.exerciseLookup
+
+<h2>Find out more about an exercise</h2>
+
+<form method="get">
+    <i class="fa-solid fa-location-arrow"></i>
+    <input type="search" id="ExerciseID" name="ExerciseID" class="form-control" value="Search For an Exercise by" />
+
+    <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
+</form>
