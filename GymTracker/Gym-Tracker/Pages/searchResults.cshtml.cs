@@ -26,7 +26,7 @@ namespace Gym_Tracker.Pages
                 ModelState.AddModelError("", "Invalid ID.");
                 return Page();
             }
-
+            //Link to the API for the razor connection
             try
             {
                 string apiUrl = $"https://localhost:7219/api/Gym/{id}";
@@ -41,7 +41,7 @@ namespace Gym_Tracker.Pages
                         Console.WriteLine("API response is empty.");
                     }
 
-                   
+                   //This part is meant for coverting a json string to an object and the !=null will ensure users is not null and if true it assigns user to a list and false it will make a new list
                     var users = JsonSerializer.Deserialize<List<UserData>>(jsonResponse, new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
