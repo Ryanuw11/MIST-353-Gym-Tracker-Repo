@@ -122,6 +122,18 @@ Note: This is what the output will look like.
 END DAVISON's APIs. 
 
 
+JOSHUA'S APIs. 
+
+Deployement guide -- 
+API #1 steps
+The steps they should take is to start with the Membership API to see what memberships are avalible and the cost of those memberships. They will first use the first Membership API to see what memberships are avalible in there area then use the second API to see what the cost of the Membership is. The pitfalls to avoid is to make sure you type in the membership Level starting with a capital letter. If you run into errors try to redo it and make sure your course has the correct ID. 
+
+API #2 steps
+Then once they have there membership they should go the course API and do the first one to see the prices of the course. Then they will have to to go the second part of the Course API to lookup the ID number for the course to see what the price would be. This will help customers see what the price of certain courses are. 
+
+
+
+This application is a lookup website where customers and employees can lookup each day what courses are avalible and what memberships are avalible. I would want them to know that it needs work with dates and the website would need to look better. There is so much more I could accomplish to make this perfect. 
 
 
 
