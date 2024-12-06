@@ -21,6 +21,10 @@ Microsoft.EntityFrameworkCore.SqlServer
 
 Microsoft.SqlServer.Server
 
+System.Data.SQLClient
+
+
+
 Some of these may not be entirely required, but it's easier to install an extra package rather than spend a long time debugging.
 
 
