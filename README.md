@@ -108,7 +108,15 @@ API #1- The purpose of this API is to allow the user to enter an email on the we
 Note: The email will be visible on the database after running the proper sql query command. 
 
 API #2- The purpose of this API is to allow users to search for the weather forecast of any particular day that they would want to exercise outside. The user will enter the date of the day, press enter, and the weather forcast including, temperature and chance of rain, will be fetched from the database. 
-Note: This is what the ** TO BE CONTINUED**
+Note: This is what the output will look like. 
+[
+  {
+    "id": 14,
+    "date": "2024-10-10T00:00:00",
+    "temp": 73,
+    "chanceOfRain": 10
+  }
+]
 
 
 END DAVISON's APIs. 
