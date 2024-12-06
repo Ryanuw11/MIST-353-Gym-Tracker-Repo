@@ -3,7 +3,7 @@
 @model Gym_Tracker.Pages.GymLocationModel
 
 
-<h2>Locations Found</h2>
+
 
 <form method="get">
     <i class="fa-solid fa-location-arrow"></i>
@@ -28,7 +28,13 @@
         @foreach (var location in Model.Locationlist)
 
         {
-            <li class="result-item">@location.GymName - @location.OpenTime - @location.CloseTime</li>
+            <li class="result-item">
+
+                <p><strong>City:</strong> @location.GymCity</p>
+                <p><strong>Opening Time:</strong> @location.OpenTime</p>
+                <p><strong>Closing Time:</strong> @location.CloseTime</p>
+                <hr/>
+            </li>
         }
     </ul>
 }

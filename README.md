@@ -103,6 +103,25 @@ END RYANS APIS
 Our Application serves as a general website where the user can do things like search for other users and friends and see how far along they are level wise. Or they could find new workouts from a page that we have that shows examples. Alongside this, they can check out the about us page to know about the company and theres also a page to contact the team. This is just some of the features our application has and the goal of this app is to have everything a gym goer could want in one single application without having to go outside of it to find new things when it comes to the gym.
 
 
+DAVISON's API:
+API #1- The purpose of this API is to allow the user to enter an email on the website that will be sent to a database. There will be page and the first thing it will show is a white box to enter one email which is clearly labeled. The user will hit enter, the email will be sent to the database, and a "Thank you! Your email has been sent." box will appear notifying the user that the goal was succesfully completed. 
+Note: The email will be visible on the database after running the proper sql query command. 
+
+API #2- The purpose of this API is to allow users to search for the weather forecast of any particular day that they would want to exercise outside. The user will enter the date of the day, press enter, and the weather forcast including, temperature and chance of rain, will be fetched from the database. 
+Note: This is what the output will look like. 
+[
+  {
+    "id": 14,
+    "date": "2024-10-10T00:00:00",
+    "temp": 73,
+    "chanceOfRain": 10
+  }
+]
+
+
+END DAVISON's APIs. 
+
+
 
 
 
