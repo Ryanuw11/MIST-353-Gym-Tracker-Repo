@@ -1,4 +1,5 @@
-﻿using GymTrackersAPI.Entities;
+﻿using Gym_TrackerAPI.Entities;
+using GymTrackersAPI.Entities;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -16,8 +17,5 @@ namespace GymTrackersAPI.Data
         public DbSet<UserData> UserData { get; set; }
 
         public DbSet<GymLoc> GymLoc { get; set; }
-        public DbSet<Apperal> Apperal { get; set; }
-        public DbSet<Exercise> Exercise { get; set; }
-
     }
 }

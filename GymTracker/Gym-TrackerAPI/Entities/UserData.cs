@@ -9,7 +9,7 @@ namespace GymTrackersAPI.Entities
 
 
 
-
+        [Key]
         [Column("id")]
         public int Id { get; set; }
 

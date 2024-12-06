@@ -3,17 +3,25 @@
 @using GymTrackersAPI.Entities
 @model Gym_Tracker.Pages.SearchResultsModel
 
+
+
 <h2>Search Results</h2>
 
 
 @if (Model.UserList != null && Model.UserList.Any())
 
 {
+    <p><strong>Users Found:</strong></p>
     <ul>
         @foreach (var user in Model.UserList)
 
         {
-            <li>@user.UserName - @user.UserEmail - @user.UserLevel</li>
+            <li>
+                <p><strong>Username:</strong> @user.UserName</p>
+                <p><strong>User Email:</strong> @user.UserEmail</p>
+                <p><strong>User Level:</strong> @user.UserLevel</p>
+                <hr /> 
+            </li>
         }
     </ul>
 }

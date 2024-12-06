@@ -7,21 +7,22 @@
 
 <link rel="stylesheet" href="~/css/site.css">
 
-<div class="container">
+<div class="container position-relative text-center">
     <img src="https://th.bing.com/th/id/OIP.Zfr9QoLyjB3Cbv6PB7mMOgHaE8?w=242&h=180&c=7&r=0&o=5&pid=1.7" />
     
-    <div class="overlay">Welcome to Gym-Tracker</div>
+    <div class="overlay text-white">Welcome to GymTracker!</div>
 
 </div>
-
+<div class="search-form mt-4 text-center">
+    <p class="instruction-text">Search for a user by ID</p>
 <form asp-page="/SearchResults" method="get">
     <i class="fa-solid fa-location-arrow"></i>
-    <input type="number" id="UserId" name="id" class="form-control" value="Search For a User" />
+    <input type="number" id="UserId" name="id" class="form-control mb-3" placeholder="Enter a User ID" />
     
     <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
 </form>
-<button id="locBtn" onclick="getLocation()"><i class="fa fa-location-arrow"></i></button>
 
+</div>
 <div id="results" class="mt-4">
 </div>
 

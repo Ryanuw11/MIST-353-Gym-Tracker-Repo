@@ -1,35 +1,37 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using GymTrackersAPI.Entities;
-using System.Text.Json;
+using Gym_TrackerAPI.Entities;
+using System.Text.Json; // Your DbContext namespace
+
 
 
 namespace Gym_Tracker.Pages
 {
-    public class SearchResultsModel : PageModel
+
+    public class MembershipLevelModel : PageModel
     {
         private readonly HttpClient _httpClient;
 
-       
-        public SearchResultsModel(HttpClient httpClient)
+
+        public MembershipLevelModel(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
 
-       
-        public IList<UserData> UserList { get; set; } = new List<UserData>();
 
-        public async Task<IActionResult> OnGetAsync(int id)
+        public IList<Membership> MembershipList { get; set; } = new List<Membership>();
+
+        public async Task<IActionResult> OnGetAsync(string MembershipLevel)
         {
-            if (id <= 0)
+            if (string.IsNullOrEmpty(MembershipLevel))
             {
-                ModelState.AddModelError("", "Invalid ID.");
+                ModelState.AddModelError("", "Enter a valid Membership Level");
                 return Page();
             }
-            //Link to the API for the razor connection
+
             try
             {
-                string apiUrl = $"https://localhost:7219/api/Gym/{id}";
+                string apiUrl = $"https://localhost:7219/api/Memberships/{MembershipLevel}";
                 var response = await _httpClient.GetAsync(apiUrl);
 
                 if (response.IsSuccessStatusCode)
@@ -41,24 +43,24 @@ namespace Gym_Tracker.Pages
                         Console.WriteLine("API response is empty.");
                     }
 
-                   //This part is meant for coverting a json string to an object and the !=null will ensure users is not null and if true it assigns user to a list and false it will make a new list
-                    var users = JsonSerializer.Deserialize<List<UserData>>(jsonResponse, new JsonSerializerOptions
+
+                    var Level = JsonSerializer.Deserialize<List<Membership>>(jsonResponse, new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
                     });
 
-                    if (users != null && users.Any())
+                    if (Level != null && Level.Any())
                     {
-                        UserList = users; 
+                        MembershipList = Level;
                     }
                     else
                     {
-                        UserList = new List<UserData>();  
+                        MembershipList = new List<Membership>();
                     }
                 }
                 else
                 {
-                    UserList = new List<UserData>(); 
+                    MembershipList = new List<Membership>();
                 }
             }
             catch (Exception ex)
@@ -70,5 +72,5 @@ namespace Gym_Tracker.Pages
             return Page();
         }
     }
-}
 
+}
