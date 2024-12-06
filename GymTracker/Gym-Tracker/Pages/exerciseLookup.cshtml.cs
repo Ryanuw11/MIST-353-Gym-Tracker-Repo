@@ -7,7 +7,7 @@ namespace Gym_Tracker.Pages
 {
     public class exerciseLookupModel : PageModel
     {
-        //test
+        //test2
 
         private readonly HttpClient _httpClient;
         public exerciseLookupModel(HttpClient httpClient)
