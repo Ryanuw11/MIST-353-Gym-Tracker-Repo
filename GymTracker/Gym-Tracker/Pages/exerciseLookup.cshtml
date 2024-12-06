@@ -1,13 +1,38 @@
 ﻿@page
 @using GymTrackersAPI.Entities
 @using Microsoft.EntityFrameworkCore.Metadata.Internal
-@model Gym_Tracker.Pages.exerciseLookup
+@model Gym_Tracker.Pages.exerciseLookupModel
 
 <h2>Find out more about an exercise</h2>
 
 <form method="get">
     <i class="fa-solid fa-location-arrow"></i>
-    <input type="search" id="ExerciseID" name="ExerciseID" class="form-control" value="Search For an Exercise by" />
+    <input type="search" id="ExerciseID" name="ExerciseID" class="form-control" value="Search For an Exercise by ID" />
 
     <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
 </form>
+
+<div id="results" class="mt-4">
+</div>
+
+<script type="module">
+    addLocationFormListen()
+</script>
+
+@if (Model.Exerciselist != null && Model.Exerciselist.Any())
+
+{
+    <ul>
+        @foreach (var Exercise in Model.Exerciselist)
+
+        {
+            <li class="result-item">@Exercise.ExerciseName - @Exercise.ExerciseEquipment - @Exercise.ExerciseMuscleTarget</li>
+        }
+    </ul>
+}
+else
+{}
+    
+        <div id="results-container">
+    <p class="result-placeholder">Find an Exercise by ID number</p>
+        </div>

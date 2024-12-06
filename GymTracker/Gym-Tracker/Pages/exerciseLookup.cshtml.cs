@@ -2,6 +2,8 @@ using GymTrackersAPI.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text.Json;
+using System.Linq;
+using Nancy.Responses;
 
 namespace Gym_Tracker.Pages
 {
@@ -27,7 +29,7 @@ namespace Gym_Tracker.Pages
             {
                 try
                 {
-                    string apiUrl = $"'https://localhost:7219/api/Exercise/ExerciseGetAll?{ExerciseId}";
+                    string apiUrl = $"https://localhost:7219/api/Exercise/ExerciseGetAll?{ExerciseId}";
                     var response = await _httpClient.GetAsync(apiUrl);
 
 
@@ -41,14 +43,14 @@ namespace Gym_Tracker.Pages
                             Console.WriteLine("API response is empty.");
                         }
 
-                        var Apperal = JsonSerializer.Deserialize<List<Exercise>>(jsonResponse, new JsonSerializerOptions
+                        var Exercise = JsonSerializer.Deserialize<List<Exercise>>(jsonResponse, new JsonSerializerOptions
                         {
 
                             PropertyNameCaseInsensitive = true
                         });
 
 
-                        if (Exercise != null && Exercise.Any())
+                       if (Exercise != null && Exercise.Any())
                         {
                             Exerciselist = Exercise;
                         }
