@@ -141,5 +141,9 @@ Then once they have there membership they should go to the course API and do the
 
 This application is a lookup website where customers and employees can look up each day what courses are available and what memberships are available. I would want them to know that it needs work with dates and the website would need to look better. There is so much more I could accomplish to make this perfect. 
 
+Dalton Knippel's API's 
+API #1 The first API is the ability for a user to lookup exercise details after providing an exercise ID. This will retunrn them the name, gym equipment, and what muscles an exercise targets. 
+API #2 The second API is for a user to get information about a particular peice of apperal. Like the first API, the user will input the apperal ID and will get back wthe type of apperal, the brand, and the material it is made of. 
+
 
 
