@@ -8,15 +8,12 @@ namespace YourNamespace.Pages
 {
     public class CoursesModel : PageModel
     {
-        // A mock list of courses to demonstrate functionality
         public List<Course> Course { get; set; }
         public string SearchQuery { get; set; }
         public List<Course> FilteredCourses { get; set; }
 
-        // OnGet() method to initialize the list of courses
         public void OnGet(string searchQuery)
         {
-            // Initial list of courses (you can replace this with a database call)
             Course = new List<Course>
             {
                 new Course { CID = 1, CourseName = "Jogging", ClassPrice = (int)(decimal)2.99 },
@@ -29,7 +26,6 @@ namespace YourNamespace.Pages
                 new Course { CID = 8, CourseName = "StairMaster", ClassPrice = (int)0.99 }
                 };
 
-            // Apply the search query filter if it exists
             if (!string.IsNullOrEmpty(searchQuery))
             {
                 SearchQuery = searchQuery;
