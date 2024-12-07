@@ -1,3 +1,5 @@
+create GymTrackerDB
+GO 
 use GymTrackerDB
 GO
 
@@ -86,24 +88,15 @@ GO
 
 
 -- Creating the tables to hold user input for the 'Contact Us' page of the web app.
-create table Customer
-([Customer_ID] int not null  primary key identity (1,1),
-[First_Name] nvarchar(225), [Last_Name] nvarchar(225))
-go
-
-
+use GymTrackerDB
+go 
 
 create table Customer_Email
-([Email] nvarchar(225) not null)
-go
-
-
--- Adding a foreign key link to Email, linking it to Customer: Customer_ID to Customer_ID
-alter table Customer_Email
-add [Customer_ID] int not null
-go
-
-alter table Customer_Email
-add foreign key ([Customer_ID]) references [Customer] ([Customer_ID])
+(Email nvarchar(225) not null)
 go 
+
+
+Create table WeatherData 
+(Id int identity (1,1) not null primary key, Date date not null, ChanceOfRain int, Temp int)
+go
 
