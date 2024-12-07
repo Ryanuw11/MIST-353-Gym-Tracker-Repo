@@ -145,5 +145,7 @@ Dalton Knippel's API's
 API #1 The first API is the ability for a user to lookup exercise details after providing an exercise ID. This will retunrn them the name, gym equipment, and what muscles an exercise targets. 
 API #2 The second API is for a user to get information about a particular peice of apperal. Like the first API, the user will input the apperal ID and will get back wthe type of apperal, the brand, and the material it is made of. 
 
+Our application has more functions as well. Users can search for a gym by name and get the buisness hours and the address. Users can also input either an apperal ID or an exercise ID to get details on that particular inquiry. This is conviently layed out in the navigation bar at the top of the page. 
+
 
 
