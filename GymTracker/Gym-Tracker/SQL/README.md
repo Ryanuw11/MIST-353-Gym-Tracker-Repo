@@ -36,6 +36,5 @@ CREATE TABLE [ext_exercise_apperal](
 GO
 
 --Davison's Contribution:
-I worked on the 'Contact Us' tables with names and emails. 
-I didn't use ChatGPT, but I did use w3schools and the lecture videos quite a bit. 
+I worked on the 'Contact Us' page. I made a table and data for it. On the contact page, there will also be a weather interface, so the user can check the weather. I made the weather table and data. 
 
