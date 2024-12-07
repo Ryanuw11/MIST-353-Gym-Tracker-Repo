@@ -100,17 +100,27 @@ GO
 --Creating mock data for the tables.
 
 
-insert into Customer
-(First_Name, Last_Name)
-values
-('Peter', 'Parker'), ('Wade', 'Wilson'), ('Steve', 'Rogers')
-go 
 
 
 insert into Customer_Email
-(Email, Customer_ID)
+(Email) 
 values
-('peter.parker@gmail.com', 1),
-('wade.wilson@gmail.com', 2),
-('steve.rogers@gmail.com', 3)
+('Elon.Musk123@gmail.com'), ('Bill.Gates456@outlook.com'), ('Steve.Jobs789@icloud.com')
 go 
+
+
+INSERT INTO WeatherData (Date, ChanceOfRain, Temp)
+VALUES 
+('2024-10-10', 30, 68),
+('2024-10-11', 50, 72),
+('2024-10-12', 10, 75),
+('2024-10-13', 40, 70),
+('2024-10-14', 20, 65),
+('2024-10-15', 80, 60),
+('2024-10-16', 60, 62),
+('2024-10-17', 25, 69),
+('2024-10-18', 5, 73),
+('2024-10-19', 90, 55);
+go 
+
+
