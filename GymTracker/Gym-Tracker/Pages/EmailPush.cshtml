@@ -1,0 +1,49 @@
+@page
+@model Gym_Tracker.Pages.EmailPushModel
+@{
+    ViewData["Title"] = "Send Email";
+}
+
+<h2>Send Email</h2>
+
+<!-- Display Success or Error Messages -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<!-- Email Form -->
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Email">Recipient Email:</label>
+        <input asp-for="Email" class="form-control" placeholder="Enter recipient email" />
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Subject">Subject:</label>
+        <input asp-for="Subject" class="form-control" placeholder="Enter email subject" />
+        <span class="text-danger" asp-validation-for="Subject"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Message">Message:</label>
+        <textarea asp-for="Message" class="form-control" placeholder="Enter email message"></textarea>
+        <span class="text-danger" asp-validation-for="Message"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Send Email</button>
+</form>
+
+@section Scripts {
+    <!-- Enable Client-Side Validation -->
+    <partial name="_ValidationScriptsPartial" />
+}
