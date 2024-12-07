@@ -12,6 +12,8 @@ builder.Services.AddScoped<IGymMenu, GymMenu>();
 builder.Services.AddScoped<ILocationMenu, LocationMenu>();
 builder.Services.AddScoped<IApperalService, ApperalService>();
 builder.Services.AddScoped<IExerciseService,  ExerciseService>();
+builder.Services.AddScoped<IEmailInput, EmailInput>();
+builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();
 
 builder.Services.AddDbContext<DbContextClass>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
