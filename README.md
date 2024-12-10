@@ -128,7 +128,7 @@ Note: This is what the output will look like.
 END DAVISON's APIs. 
 
 
-JOSHUA'S APIs. 
+JOSH Morrison APIs. 
 
 Deployment guide -- 
 API #1 steps
