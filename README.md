@@ -140,11 +140,18 @@ API #2 steps
 Then once they have there membership they should go to the course API and do the first one to see the prices of the course. Then they will have to to go the second part of the Course API to lookup the ID number for the course to see what the price would be. This will help customers see what the price of certain courses is. 
 
 
-
 This application is a lookup website where customers and employees can look up each day what courses are available and what memberships are available. I would want them to know that it needs work with dates and the website would need to look better. There is so much more I could accomplish to make this perfect. 
 
+
+
+RAZOR PAGE Joshua Morrison  
+MEMBERSHIP RAZOR PAGE: My first Razor Page is helping customers lookup the membership they are interested in and being able to see what the membership cost is. 
+COURSE RAZOR PAGE: This page works as a lookup as well where the user can lookup the avalible courses and see what the cost is. 
+
+
+
 Dalton Knippel's API's 
-API #1 The first API is the ability for a user to lookup exercise details after providing an exercise ID. This will retunrn them the name, gym equipment, and what muscles an exercise targets. 
+API #1 The first API is the ability for a user to lookup exercise details after providing an exercise ID. This will return them the name, gym equipment, and what muscles an exercise targets. 
 API #2 The second API is for a user to get information about a particular peice of apperal. Like the first API, the user will input the apperal ID and will get back wthe type of apperal, the brand, and the material it is made of. 
 
 Our application has more functions as well. Users can search for a gym by name and get the buisness hours and the address. Users can also input either an apperal ID or an exercise ID to get details on that particular inquiry. This is conviently layed out in the navigation bar at the top of the page. 
