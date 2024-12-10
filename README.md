@@ -111,7 +111,9 @@ Our Application serves as a general website where the user can do things like se
 If a team of devs were to take over the project then I'd suggest to them that packages are very important for starting this project and many functions will break if the dev is missing even one package. Currently the APIs are fine as is but if the new devs were taking over to expand the website id suggest adding significantly more data to the db alongside adding more JS to the main pages to make the website look more professional. 
 
 
-DAVISON's API:
+DAVISON's API & Razor Pages:
+Razor Pages: I made the EmailPush razor pages which are located in the second branch. They are having issues that I am currently working out which is why I didn't include them in the main branch. There will also be a GetWeather razor page once the issues with the first one are solved. Just so you're aware that I am planning on making the required two razor pages for the two APIs.
+
 API #1- The purpose of this API is to allow the user to enter an email on the website that will be sent to a database. There will be a page and the first thing it will show is a white box to enter one email which is clearly labeled. The user will hit enter, the email will be sent to the database, and a "Thank you! Your email has been sent." box will appear notifying the user that the goal was successfully completed. 
 Note: The email will be visible on the database after running the proper SQL query command. 
 
