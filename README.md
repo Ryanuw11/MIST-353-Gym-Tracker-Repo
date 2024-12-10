@@ -52,6 +52,8 @@ Pitfall: ensure the spacing is correct in this statement since improper spacing 
 
 For help with errors, there are many different sources of assistance such as, The error help function in the IDE, Stack OverFlow, Resources on Ecampus, W3Schools, Copliot AI within MVS, Chatgpt, Mr Meadows, Our Group! 
 
+Razor Page's Ryan's Work:
+I worked on the main index page of the project that redirects to Searchresults and the location page
 
 API Functionality:
 
