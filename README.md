@@ -158,5 +158,9 @@ API #2 The second API is for a user to get information about a particular peice 
 
 Our application has more functions as well. Users can search for a gym by name and get the buisness hours and the address. Users can also input either an apperal ID or an exercise ID to get details on that particular inquiry. This is conviently layed out in the navigation bar at the top of the page. 
 
+Dalton Knippel's RAZOR PAGES
+Apperal Information - A user enters a peice of apperal they have an ID number for and they get the details for that apperal. THis gives them the type, brand, and material of that apperal.
+Exercise Lookup - A user inputs an exercise by ID number and gets back the name of the exercise, affiliated gym equipment, and what muscles that exercise targets.
+
 
 
