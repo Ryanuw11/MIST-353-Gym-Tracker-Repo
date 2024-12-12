@@ -52,6 +52,8 @@ Pitfall: ensure the spacing is correct in this statement since improper spacing 
 
 For help with errors, there are many different sources of assistance such as, The error help function in the IDE, Stack OverFlow, Resources on Ecampus, W3Schools, Copliot AI within MVS, Chatgpt, Mr Meadows, Our Group! 
 
+Razor Page's Ryan's Work:
+I worked on the main index page of the project that redirects to Searchresults and the location page
 
 API Functionality:
 
@@ -109,7 +111,9 @@ Our Application serves as a general website where the user can do things like se
 If a team of devs were to take over the project then I'd suggest to them that packages are very important for starting this project and many functions will break if the dev is missing even one package. Currently the APIs are fine as is but if the new devs were taking over to expand the website id suggest adding significantly more data to the db alongside adding more JS to the main pages to make the website look more professional. 
 
 
-DAVISON's API:
+DAVISON's API & Razor Pages:
+Razor Pages: I made the EmailPush razor pages which are located in the second branch. They are having issues that I am currently working out which is why I didn't include them in the main branch. There will also be a GetWeather razor page once the issues with the first one are solved. Just so you're aware that I am planning on making the required two razor pages for the two APIs.
+
 API #1- The purpose of this API is to allow the user to enter an email on the website that will be sent to a database. There will be a page and the first thing it will show is a white box to enter one email which is clearly labeled. The user will hit enter, the email will be sent to the database, and a "Thank you! Your email has been sent." box will appear notifying the user that the goal was successfully completed. 
 Note: The email will be visible on the database after running the proper SQL query command. 
 
@@ -128,7 +132,7 @@ Note: This is what the output will look like.
 END DAVISON's APIs. 
 
 
-JOSHUA'S APIs. 
+JOSH Morrison APIs. 
 
 Deployment guide -- 
 API #1 steps
@@ -138,12 +142,25 @@ API #2 steps
 Then once they have there membership they should go to the course API and do the first one to see the prices of the course. Then they will have to to go the second part of the Course API to lookup the ID number for the course to see what the price would be. This will help customers see what the price of certain courses is. 
 
 
-
 This application is a lookup website where customers and employees can look up each day what courses are available and what memberships are available. I would want them to know that it needs work with dates and the website would need to look better. There is so much more I could accomplish to make this perfect. 
 
+
+
+RAZOR PAGE Joshua Morrison  
+MEMBERSHIP RAZOR PAGE: My first Razor Page is helping customers lookup the membership they are interested in and being able to see what the membership cost is. 
+COURSE RAZOR PAGE: This page works as a lookup as well where the user can lookup the avalible courses and see what the cost is. 
+
+
+
 Dalton Knippel's API's 
-API #1 The first API is the ability for a user to lookup exercise details after providing an exercise ID. This will retunrn them the name, gym equipment, and what muscles an exercise targets. 
+API #1 The first API is the ability for a user to lookup exercise details after providing an exercise ID. This will return them the name, gym equipment, and what muscles an exercise targets. 
 API #2 The second API is for a user to get information about a particular peice of apperal. Like the first API, the user will input the apperal ID and will get back wthe type of apperal, the brand, and the material it is made of. 
+
+Our application has more functions as well. Users can search for a gym by name and get the buisness hours and the address. Users can also input either an apperal ID or an exercise ID to get details on that particular inquiry. This is conviently layed out in the navigation bar at the top of the page. 
+
+Dalton Knippel's RAZOR PAGES
+Apperal Information - A user enters a peice of apperal they have an ID number for and they get the details for that apperal. THis gives them the type, brand, and material of that apperal.
+Exercise Lookup - A user inputs an exercise by ID number and gets back the name of the exercise, affiliated gym equipment, and what muscles that exercise targets.
 
 
 
