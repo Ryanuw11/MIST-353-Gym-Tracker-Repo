@@ -36,7 +36,6 @@
 
   <ItemGroup>
     <Folder Include="Entities\" />
-    <Folder Include="Pages\UserCRUD\" />
   </ItemGroup>
 
 </Project>
