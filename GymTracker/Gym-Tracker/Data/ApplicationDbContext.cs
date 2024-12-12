@@ -12,8 +12,7 @@ namespace Gym_Tracker.Data
         {
         }
 
-        public DbSet<Membership> Membership { get; set; } = default!;
-        public DbSet<UserData> UserData { get; set; } = default!;
+        
     }
 }
 

@@ -2,7 +2,7 @@ using GymTrackersAPI.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.IdentityModel.Tokens;
-using Nancy.Responses;
+
 using System.Text.Json;
 
 namespace Gym_Tracker.Pages
