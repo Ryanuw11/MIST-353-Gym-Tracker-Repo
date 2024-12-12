@@ -5,12 +5,14 @@
 
 <h2>Find Apperal That Meets Your Needs</h2>
 
-<form method="get">
+<form method="get" action="@Url.Page("/ApparalCrud/Index")">
     <i class="fa-solid fa-location-arrow"></i>
-    <input type="search" id="ApperalID" name="ApperalID" class="form-control" value="Search Apperal By ID" />
+    <input type="search" id="ApperalID" name="ApperalID" class="form-control" />
 
     <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
 </form>
+
+
 
 <div id="results" class="mt-4">
 </div>
@@ -35,7 +37,7 @@ else
 {}
     
         <div id="results-container">
-    <p class="result-placeholder">Enter Apperal's ID Number</p>
+    <p class="result-placeholder">Enter Apperal's ID Number or Just Hit Search to View All</p>
         </div>
     
 

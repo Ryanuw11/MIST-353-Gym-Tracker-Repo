@@ -1,0 +1,43 @@
+﻿@page
+@model Gym_Tracker.Pages.ApparalCrud.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ExtExerciseApperal</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtExerciseApperal.ApperalType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtExerciseApperal.ApperalType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtExerciseApperal.ApperalBrand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtExerciseApperal.ApperalBrand)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtExerciseApperal.ApperalMaterial)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtExerciseApperal.ApperalMaterial)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtExerciseApperal.ApperalExerciseNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtExerciseApperal.ApperalExerciseNavigation.ExerciseId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ExtExerciseApperal.ApperalId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

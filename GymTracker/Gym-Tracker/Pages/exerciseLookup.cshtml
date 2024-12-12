@@ -3,14 +3,16 @@
 @using Microsoft.EntityFrameworkCore.Metadata.Internal
 @model Gym_Tracker.Pages.exerciseLookupModel
 
-<h2>Find out more about an exercise</h2>
+<h2>Find out more about our exercises</h2>
 
-<form method="get">
+<form method="get" action="@Url.Page("/ExerciseCrud/Index")">
     <i class="fa-solid fa-location-arrow"></i>
-    <input type="search" id="ExerciseID" name="ExerciseID" class="form-control" value="Search For an Exercise by ID" />
+    
 
     <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
 </form>
+
+
 
 <div id="results" class="mt-4">
 </div>
@@ -34,5 +36,5 @@ else
 {}
     
         <div id="results-container">
-    <p class="result-placeholder">Find an Exercise by ID number</p>
+    
         </div>

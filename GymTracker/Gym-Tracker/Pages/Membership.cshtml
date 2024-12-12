@@ -5,12 +5,13 @@
 
 <h2>Memberships Avalible</h2>
 
-<form method="get">
-    <i class="fa-solid fa-location-arrow"></i>
-    <input type="search" ID="searchInput" name="MembershipLevel" class="form-control" placeholder="Search for Membership" />
 
-    <input type="submit" ID="submitBtn" value="Search" class="btn btn-primary" />
-</form>
+
+    
+
+<a href="@Url.Page("/MembershipCrud/Index")" class="btn btn-secondary">
+    View Membership Levels
+</a>
 
 
 <div ID="ID">
@@ -37,6 +38,6 @@ else
 
 {
     <div id="results-container">
-        <p class="result-placeholder">Enter a Membership Level</p>
+        
     </div>
 }

@@ -1,0 +1,48 @@
+﻿@page
+@model Gym_Tracker.Pages.ApparalCrud.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ExtExerciseApperal</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ExtExerciseApperal.ApperalType" class="control-label"></label>
+                <input asp-for="ExtExerciseApperal.ApperalType" class="form-control" />
+                <span asp-validation-for="ExtExerciseApperal.ApperalType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtExerciseApperal.ApperalBrand" class="control-label"></label>
+                <input asp-for="ExtExerciseApperal.ApperalBrand" class="form-control" />
+                <span asp-validation-for="ExtExerciseApperal.ApperalBrand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtExerciseApperal.ApperalMaterial" class="control-label"></label>
+                <input asp-for="ExtExerciseApperal.ApperalMaterial" class="form-control" />
+                <span asp-validation-for="ExtExerciseApperal.ApperalMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtExerciseApperal.ApperalExercise" class="control-label"></label>
+                <select asp-for="ExtExerciseApperal.ApperalExercise" class ="form-control" asp-items="ViewBag.ApperalExercise"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

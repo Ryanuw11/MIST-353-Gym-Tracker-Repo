@@ -1,0 +1,49 @@
+﻿@page
+@model Gym_Tracker.Pages.GymLocCrud.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ExtGymOrg</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ExtGymOrg.GymName" class="control-label"></label>
+                <input asp-for="ExtGymOrg.GymName" class="form-control" />
+                <span asp-validation-for="ExtGymOrg.GymName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtGymOrg.GymCity" class="control-label"></label>
+                <input asp-for="ExtGymOrg.GymCity" class="form-control" />
+                <span asp-validation-for="ExtGymOrg.GymCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtGymOrg.OpenTime" class="control-label"></label>
+                <input asp-for="ExtGymOrg.OpenTime" class="form-control" />
+                <span asp-validation-for="ExtGymOrg.OpenTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtGymOrg.CloseTime" class="control-label"></label>
+                <input asp-for="ExtGymOrg.CloseTime" class="form-control" />
+                <span asp-validation-for="ExtGymOrg.CloseTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

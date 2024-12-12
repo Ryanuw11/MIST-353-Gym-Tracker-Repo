@@ -21,16 +21,17 @@
 <div class="email">Please provide your email address.</div>
 
 
-    
-<form>
-    <label for="email">Email Address:</label><br>
-
-    <input type="email" id="email" name="email"><br />
 
 
+    <form method="post" action="@Url.Page("/EmailCrud/Create")">
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" class="form-control" required /><br />
 
-   </form>
-    <button type="button" class="Enter btn-primary">Enter</button>
+            <input type="submit" value="Enter" class="btn btn-primary" />
+        </form>
+
+   
+  
 
 </body>
 </html>

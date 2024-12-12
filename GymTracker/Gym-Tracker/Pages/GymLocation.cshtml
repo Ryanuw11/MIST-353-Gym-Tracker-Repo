@@ -4,13 +4,14 @@
 
 
 
-
-<form method="get">
+<h1>Click Display to View All Partnered Gym's!</h1>
+<form method="get" action="@Url.Page("/GymLocCrud/Index")">
     <i class="fa-solid fa-location-arrow"></i>
-    <input type="search" id="GymName" name="GymName" class="form-control" value="Search For a Gym" />
+    
 
-    <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
+    <input type="submit" id="submitBtn" value="Display" class="btn btn-primary" />
 </form>
+
 
 
 <div id="results" class="mt-4">
@@ -43,6 +44,6 @@ else
 
 {
     <div id="results-container">
-        <p class="result-placeholder">Enter a gym name to begin your search</p>
+        <p class="result-placeholder"></p>
     </div>
 }

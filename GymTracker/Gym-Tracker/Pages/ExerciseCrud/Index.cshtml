@@ -1,0 +1,48 @@
+﻿@page
+@model Gym_Tracker.Pages.ExerciseCrud.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtExercise[0].ExerciseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtExercise[0].ExerciseEquipment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtExercise[0].ExerciseMuscleTarget)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ExtExercise) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExerciseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExerciseEquipment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExerciseMuscleTarget)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ExerciseId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ExerciseId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ExerciseId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

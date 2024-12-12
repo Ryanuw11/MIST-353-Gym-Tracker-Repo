@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Gym_Tracker.Data;
 
-namespace Gym_Tracker.Pages.MembershipCrud
+namespace Gym_Tracker.Pages.EmailCrud
 {
     public class IndexModel : PageModel
     {
@@ -18,11 +18,11 @@ namespace Gym_Tracker.Pages.MembershipCrud
             _context = context;
         }
 
-        public IList<Membership> Membership { get;set; } = default!;
-        public string SearchTerm { get; set; }
+        public IList<Customer> Customer { get;set; } = default!;
+
         public async Task OnGetAsync()
         {
-            Membership = await _context.Memberships.ToListAsync();
+            Customer = await _context.Customers.ToListAsync();
         }
     }
 }

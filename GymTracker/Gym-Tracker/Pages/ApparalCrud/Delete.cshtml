@@ -1,0 +1,46 @@
+﻿@page
+@model Gym_Tracker.Pages.ApparalCrud.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ExtExerciseApperal</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtExerciseApperal.ApperalType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtExerciseApperal.ApperalType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtExerciseApperal.ApperalBrand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtExerciseApperal.ApperalBrand)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtExerciseApperal.ApperalMaterial)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtExerciseApperal.ApperalMaterial)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtExerciseApperal.ApperalExerciseNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtExerciseApperal.ApperalExerciseNavigation.ExerciseId)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="ExtExerciseApperal.ApperalId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

@@ -22,6 +22,16 @@
                 <p><strong>User Level:</strong> @user.UserLevel</p>
                 <hr /> 
             </li>
+            <td>
+                <a href="@Url.Page("/UserCrud/Edit", new { id = user.Id })"class="btn btn-danger">Edit</a>
+            </td>
+            <td>
+                <a href="@Url.Page("/UserCrud/Delete", new { id = user.Id })" class="btn btn-danger">Delete</a>
+            </td>
+
+            <td>
+                <a href="@Url.Page("/UserCrud/Index", new { id = user.Id })" class="btn btn-danger">View all</a>
+            </td>
         }
     </ul>
 }
