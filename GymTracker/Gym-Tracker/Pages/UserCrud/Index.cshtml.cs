@@ -18,7 +18,7 @@ namespace Gym_Tracker.Pages.UserCrud
             _context = context;
         }
 
-        public IList<ExtUserDatum> ExtUserDatum { get;set; } = default!;
+        public IList<Gym_Tracker.Data.ExtUserDatum> ExtUserDatum { get;set; } = default!;
 
         public async Task OnGetAsync()
         {

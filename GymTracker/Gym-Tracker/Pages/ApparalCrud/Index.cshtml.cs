@@ -18,7 +18,7 @@ namespace Gym_Tracker.Pages.ApparalCrud
             _context = context;
         }
 
-        public IList<ExtExerciseApperal> ExtExerciseApperal { get;set; } = default!;
+        public IList<Gym_Tracker.Data.ExtExerciseApperal> ExtExerciseApperal { get;set; } = default!;
 
         public async Task OnGetAsync(string apperalID)
         {

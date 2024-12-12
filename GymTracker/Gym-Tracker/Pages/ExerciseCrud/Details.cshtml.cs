@@ -18,7 +18,7 @@ namespace Gym_Tracker.Pages.ExerciseCrud
             _context = context;
         }
 
-        public ExtExercise ExtExercise { get; set; } = default!;
+        public Gym_Tracker.Data.ExtExercise ExtExercise { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

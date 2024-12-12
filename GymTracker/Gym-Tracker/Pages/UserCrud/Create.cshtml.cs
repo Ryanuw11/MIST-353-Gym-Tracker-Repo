@@ -24,7 +24,7 @@ namespace Gym_Tracker.Pages.UserCrud
         }
 
         [BindProperty]
-        public ExtUserDatum ExtUserDatum { get; set; } = default!;
+        public Gym_Tracker.Data.ExtUserDatum ExtUserDatum { get; set; } = default!;
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()

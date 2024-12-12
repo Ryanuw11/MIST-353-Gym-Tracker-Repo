@@ -24,7 +24,7 @@ namespace Gym_Tracker.Pages.GymLocCrud
         }
 
         [BindProperty]
-        public ExtGymOrg ExtGymOrg { get; set; } = default!;
+        public Gym_Tracker.Data.ExtGymOrg ExtGymOrg { get; set; } = default!;
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()

@@ -24,7 +24,7 @@ namespace Gym_Tracker.Pages.MembershipCrud
         }
 
         [BindProperty]
-        public Membership Membership { get; set; } = default!;
+        public Gym_Tracker.Data.Membership Membership { get; set; } = default!;
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()

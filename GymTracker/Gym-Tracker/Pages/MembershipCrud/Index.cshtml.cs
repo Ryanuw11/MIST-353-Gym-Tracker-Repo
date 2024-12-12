@@ -18,7 +18,7 @@ namespace Gym_Tracker.Pages.MembershipCrud
             _context = context;
         }
 
-        public IList<Membership> Membership { get;set; } = default!;
+        public IList<Gym_Tracker.Data.Membership> Membership { get;set; } = default!;
         public string SearchTerm { get; set; }
         public async Task OnGetAsync()
         {

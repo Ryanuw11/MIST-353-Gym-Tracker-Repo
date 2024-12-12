@@ -18,7 +18,7 @@ namespace Gym_Tracker.Pages.MembershipCrud
             _context = context;
         }
 
-        public Membership Membership { get; set; } = default!;
+        public Gym_Tracker.Data.Membership Membership { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

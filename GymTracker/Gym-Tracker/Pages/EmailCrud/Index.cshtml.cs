@@ -18,7 +18,7 @@ namespace Gym_Tracker.Pages.EmailCrud
             _context = context;
         }
 
-        public IList<Customer> Customer { get;set; } = default!;
+        public IList<Gym_Tracker.Data.Customer> Customer { get;set; } = default!;
 
         public async Task OnGetAsync()
         {

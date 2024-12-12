@@ -18,7 +18,7 @@ namespace Gym_Tracker.Pages.GymLocCrud
             _context = context;
         }
 
-        public IList<ExtGymOrg> ExtGymOrg { get;set; } = default!;
+        public IList<Gym_Tracker.Data.ExtGymOrg> ExtGymOrg { get;set; } = default!;
 
         public async Task OnGetAsync()
         {

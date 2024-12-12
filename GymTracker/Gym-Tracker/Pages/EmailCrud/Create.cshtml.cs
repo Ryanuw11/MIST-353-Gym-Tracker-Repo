@@ -24,7 +24,7 @@ namespace Gym_Tracker.Pages.EmailCrud
         }
 
         [BindProperty]
-        public Customer Customer { get; set; } = default!;
+        public Gym_Tracker.Data.Customer Customer { get; set; } = default!;
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()

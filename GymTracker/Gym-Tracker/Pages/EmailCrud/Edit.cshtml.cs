@@ -20,7 +20,7 @@ namespace Gym_Tracker.Pages.EmailCrud
         }
 
         [BindProperty]
-        public Customer Customer { get; set; } = default!;
+        public Gym_Tracker.Data.Customer Customer { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

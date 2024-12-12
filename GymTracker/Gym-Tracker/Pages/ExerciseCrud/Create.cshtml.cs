@@ -24,7 +24,7 @@ namespace Gym_Tracker.Pages.ExerciseCrud
         }
 
         [BindProperty]
-        public ExtExercise ExtExercise { get; set; } = default!;
+        public Gym_Tracker.Data.ExtExercise ExtExercise { get; set; } = default!;
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
