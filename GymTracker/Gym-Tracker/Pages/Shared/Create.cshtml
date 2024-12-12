@@ -1,0 +1,49 @@
+﻿@page
+@model Gym_Tracker.Pages.Shared.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Membership</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Membership.Id" class="control-label"></label>
+                <input asp-for="Membership.Id" class="form-control" />
+                <span asp-validation-for="Membership.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Membership.MembershipLevel" class="control-label"></label>
+                <input asp-for="Membership.MembershipLevel" class="form-control" />
+                <span asp-validation-for="Membership.MembershipLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Membership.MembershipMonthPrice" class="control-label"></label>
+                <input asp-for="Membership.MembershipMonthPrice" class="form-control" />
+                <span asp-validation-for="Membership.MembershipMonthPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Membership.MembershipMonthLength" class="control-label"></label>
+                <input asp-for="Membership.MembershipMonthLength" class="form-control" />
+                <span asp-validation-for="Membership.MembershipMonthLength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

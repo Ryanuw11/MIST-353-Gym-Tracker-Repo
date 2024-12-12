@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Gym_Tracker.Data;
 
-namespace Gym_Tracker.Pages
+namespace Gym_Tracker.Pages.Shared
 {
     public class IndexModel : PageModel
     {
@@ -18,11 +18,11 @@ namespace Gym_Tracker.Pages
             _context = context;
         }
 
-        public IList<Course> Course { get;set; } = default!;
+        public IList<Membership> Membership { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Course = await _context.Courses.ToListAsync();
+            Membership = await _context.Memberships.ToListAsync();
         }
     }
 }
