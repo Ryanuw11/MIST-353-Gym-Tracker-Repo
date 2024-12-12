@@ -1,0 +1,37 @@
+﻿@page
+@model Gym_Tracker.Pages.WeatherCrud.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>WeatherData</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WeatherData.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WeatherData.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WeatherData.Temp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WeatherData.Temp)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WeatherData.ChanceOfRain)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WeatherData.ChanceOfRain)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.WeatherData.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Gym_Tracker;
+using Gym_TrackerAPI.Entities;
 
 namespace Gym_Tracker.Data;
 
@@ -193,4 +195,8 @@ public partial class GymTrackerDbContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+public DbSet<Gym_Tracker.WeatherDatum> WeatherDatum { get; set; } = default!;
+
+public DbSet<Gym_TrackerAPI.Entities.WeatherData> WeatherData { get; set; } = default!;
 }

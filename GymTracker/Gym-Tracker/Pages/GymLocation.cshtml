@@ -12,11 +12,31 @@
     <input type="submit" id="submitBtn" value="Display" class="btn btn-primary" />
 </form>
 
+<h2>Or Display The Weather For That Location </h2>
+<form method="get" action="@Url.Page("/WeatherCrud/Index")">
+   
+
+
+    <input type="submit" value="Enter" class="btn btn-primary" />
+</form>
+
 
 
 <div id="results" class="mt-4">
 </div>
+<style>
+    form {
+        margin-bottom: 20px; /* Adds space between the forms */
+    }
 
+    h1, h2 {
+        margin-bottom: 20px; /* Adds space below headings */
+    }
+
+    input[type="submit"] {
+        margin-top: 10px; /* Adds space between the input field and button */
+    }
+</style>
 
 <script type="module">
     addLocationFormListen()
