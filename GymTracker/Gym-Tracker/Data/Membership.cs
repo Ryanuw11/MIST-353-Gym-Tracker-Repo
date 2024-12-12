@@ -12,4 +12,6 @@ public partial class Membership
     public decimal? MembershipMonthPrice { get; set; }
 
     public int? MembershipMonthLength { get; set; }
+
+
 }
