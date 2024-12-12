@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Gym_Tracker.Data;
 
-namespace Gym_Tracker.Pages.Shared
+namespace Gym_Tracker.Pages.Membership
 {
     public class CreateModel : PageModel
     {
@@ -24,7 +24,7 @@ namespace Gym_Tracker.Pages.Shared
         }
 
         [BindProperty]
-        public Membership Membership { get; set; } = default!;
+        public Pages_Membership Membership { get; set; } = default!;
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
@@ -34,7 +34,7 @@ namespace Gym_Tracker.Pages.Shared
                 return Page();
             }
 
-            _context.Memberships.Add(Membership);
+            Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<Data.Membership> entityEntry = _context.Memberships.Add(Membership);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

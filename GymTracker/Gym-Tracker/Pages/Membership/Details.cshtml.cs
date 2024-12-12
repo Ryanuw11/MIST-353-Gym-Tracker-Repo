@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Gym_Tracker.Data;
 
-namespace Gym_Tracker.Pages
+namespace Gym_Tracker.Pages.Membership
 {
     public class DetailsModel : PageModel
     {
@@ -18,7 +18,7 @@ namespace Gym_Tracker.Pages
             _context = context;
         }
 
-        public Course Course { get; set; } = default!;
+        public Membership Membership { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -27,14 +27,14 @@ namespace Gym_Tracker.Pages
                 return NotFound();
             }
 
-            var course = await _context.Courses.FirstOrDefaultAsync(m => m.Cid == id);
-            if (course == null)
+            var membership = await _context.Memberships.FirstOrDefaultAsync(m => m.Id == id);
+            if (membership == null)
             {
                 return NotFound();
             }
             else
             {
-                Course = course;
+                Membership = membership;
             }
             return Page();
         }

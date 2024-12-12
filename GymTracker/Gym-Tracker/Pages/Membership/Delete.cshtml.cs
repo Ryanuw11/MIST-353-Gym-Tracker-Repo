@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Gym_Tracker.Data;
 
-namespace Gym_Tracker.Pages
+namespace Gym_Tracker.Pages.Membership
 {
     public class DeleteModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace Gym_Tracker.Pages
         }
 
         [BindProperty]
-        public Course Course { get; set; } = default!;
+        public Membership Membership { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,15 +28,15 @@ namespace Gym_Tracker.Pages
                 return NotFound();
             }
 
-            var course = await _context.Courses.FirstOrDefaultAsync(m => m.Cid == id);
+            var membership = await _context.Memberships.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (course == null)
+            if (membership == null)
             {
                 return NotFound();
             }
             else
             {
-                Course = course;
+                Membership = membership;
             }
             return Page();
         }
@@ -48,11 +48,11 @@ namespace Gym_Tracker.Pages
                 return NotFound();
             }
 
-            var course = await _context.Courses.FindAsync(id);
-            if (course != null)
+            var membership = await _context.Memberships.FindAsync(id);
+            if (membership != null)
             {
-                Course = course;
-                _context.Courses.Remove(Course);
+                Membership = membership;
+                _context.Memberships.Remove(Membership);
                 await _context.SaveChangesAsync();
             }
 

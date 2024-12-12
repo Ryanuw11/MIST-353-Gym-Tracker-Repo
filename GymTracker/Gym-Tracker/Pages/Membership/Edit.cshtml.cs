@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Gym_Tracker.Data;
 
-namespace Gym_Tracker.Pages
+namespace Gym_Tracker.Pages.Membership
 {
     public class EditModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace Gym_Tracker.Pages
         }
 
         [BindProperty]
-        public Course Course { get; set; } = default!;
+        public Membership Membership { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,12 +29,12 @@ namespace Gym_Tracker.Pages
                 return NotFound();
             }
 
-            var course =  await _context.Courses.FirstOrDefaultAsync(m => m.Cid == id);
-            if (course == null)
+            var membership =  await _context.Memberships.FirstOrDefaultAsync(m => m.Id == id);
+            if (membership == null)
             {
                 return NotFound();
             }
-            Course = course;
+            Membership = membership;
             return Page();
         }
 
@@ -47,7 +47,7 @@ namespace Gym_Tracker.Pages
                 return Page();
             }
 
-            _context.Attach(Course).State = EntityState.Modified;
+            _context.Attach(Membership).State = EntityState.Modified;
 
             try
             {
@@ -55,7 +55,7 @@ namespace Gym_Tracker.Pages
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CourseExists(Course.Cid))
+                if (!MembershipExists(Membership.Id))
                 {
                     return NotFound();
                 }
@@ -68,9 +68,9 @@ namespace Gym_Tracker.Pages
             return RedirectToPage("./Index");
         }
 
-        private bool CourseExists(int id)
+        private bool MembershipExists(int id)
         {
-            return _context.Courses.Any(e => e.Cid == id);
+            return _context.Memberships.Any(e => e.Id == id);
         }
     }
 }
