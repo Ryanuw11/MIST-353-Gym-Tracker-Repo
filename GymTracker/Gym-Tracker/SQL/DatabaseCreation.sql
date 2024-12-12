@@ -1,3 +1,4 @@
+create database GymTrackerDB
 use GymTrackerDB
 GO
 
