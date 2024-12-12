@@ -1,0 +1,64 @@
+﻿@page
+@model Gym_Tracker.Pages.UserCrud.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ExtUserDatum</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ExtUserDatum.UserName" class="control-label"></label>
+                <input asp-for="ExtUserDatum.UserName" class="form-control" />
+                <span asp-validation-for="ExtUserDatum.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtUserDatum.UserPassword" class="control-label"></label>
+                <input asp-for="ExtUserDatum.UserPassword" class="form-control" />
+                <span asp-validation-for="ExtUserDatum.UserPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtUserDatum.UserEmail" class="control-label"></label>
+                <input asp-for="ExtUserDatum.UserEmail" class="form-control" />
+                <span asp-validation-for="ExtUserDatum.UserEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtUserDatum.UserAddress" class="control-label"></label>
+                <input asp-for="ExtUserDatum.UserAddress" class="form-control" />
+                <span asp-validation-for="ExtUserDatum.UserAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtUserDatum.UserCity" class="control-label"></label>
+                <input asp-for="ExtUserDatum.UserCity" class="form-control" />
+                <span asp-validation-for="ExtUserDatum.UserCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtUserDatum.UserJoined" class="control-label"></label>
+                <input asp-for="ExtUserDatum.UserJoined" class="form-control" />
+                <span asp-validation-for="ExtUserDatum.UserJoined" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtUserDatum.UserLevel" class="control-label"></label>
+                <input asp-for="ExtUserDatum.UserLevel" class="form-control" />
+                <span asp-validation-for="ExtUserDatum.UserLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
