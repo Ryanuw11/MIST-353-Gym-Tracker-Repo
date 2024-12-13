@@ -109,9 +109,9 @@ Our Application serves as a general website where the user can do things like se
 If a team of devs were to take over the project then I'd suggest to them that packages are very important for starting this project and many functions will break if the dev is missing even one package. Currently the APIs are fine as is but if the new devs were taking over to expand the website id suggest adding significantly more data to the db alongside adding more JS to the main pages to make the website look more professional. 
 
 
-DAVISON's API:
-API #1- The purpose of this API is to allow the user to enter an email on the website that will be sent to a database. There will be a page and the first thing it will show is a white box to enter one email which is clearly labeled. The user will hit enter, the email will be sent to the database, and a "Thank you! Your email has been sent." box will appear notifying the user that the goal was successfully completed. 
-Note: The email will be visible on the database after running the proper SQL query command. 
+DAVISON's API: (UPDATED)
+API #1- The purpose of this API is to allow the user to enter an email on the website that will be sent to a database. There will be a page and the first thing it will show is a white box to enter one email which is clearly labeled. The user will hit enter and the email will be sent to the database. The user can also type in their first and last names and sent that to the database. 
+Note: The email and names will be visible on the database after running the proper SQL query command. 
 
 API #2- The purpose of this API is to allow users to search for the weather forecast of any particular day that they would want to exercise outside. The user will enter the date of the day, press enter, and the weather forecast including, temperature and chance of rain, will be fetched from the database. 
 Note: This is what the output will look like. 
